@@ -32,7 +32,6 @@ We explored the following sources to understand and compare these filters:
   - OpenCV documentation on filters and convolutions
   - "Deep Learning" - Ian Goodfellow, Yoshua Bengio, Aaron Courville
 - **Online References**
-  - Wikipedia: [Kernel (image processing)](https://en.wikipedia.org/wiki/Kernel_(image_processing))
   - Medium, Towards Data Science articles on CNN and image processing
 
 ## Chosen Filter & Justification
