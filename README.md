@@ -72,4 +72,4 @@ cv2.destroyAllWindows()
 By implementing the **Sobel Edge Detection Filter**, we can effectively extract edges from images, improving the ability of our project to analyze visual features. This technique is commonly used in artificial intelligence applications, making it a valuable addition to our image processing pipeline.
 
 ---
-Feel free to modify and expand based on further research and discussions with the team!
+
