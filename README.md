@@ -35,10 +35,10 @@ We explored the following sources to understand and compare these filters:
   - Medium, Towards Data Science articles on CNN and image processing
 
 ## Chosen Filter & Justification
-After comparing various filters, we selected **[Chosen Filter Name]** because:
-- **[Reason 1]** (e.g., best preserves image details while reducing noise)
-- **[Reason 2]** (e.g., computationally efficient for real-time processing)
-- **[Reason 3]** (e.g., widely used in industry applications)
+After comparing various filters, we selected **Sobel Edge Detection Filter** because:
+- **Enhances edges effectively** by computing intensity gradients in both horizontal and vertical directions.
+- **Preserves important image details** while removing unnecessary noise.
+- **Widely used in computer vision applications**, such as object recognition and segmentation.
 
 This filter aligns best with our project requirements and enhances image processing performance.
 
@@ -48,24 +48,28 @@ To apply this filter in our project, follow these steps:
 import cv2
 import numpy as np
 
-# Define the chosen filter kernel
-kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]]) # Example: Sharpening
-
 # Load the image
-image = cv2.imread('input.jpg')
+gray_image = cv2.imread('input.jpg', cv2.IMREAD_GRAYSCALE)
 
-# Apply the filter
-filtered_image = cv2.filter2D(image, -1, kernel)
+# Apply the Sobel filter in both directions
+sobel_x = cv2.Sobel(gray_image, cv2.CV_64F, 1, 0, ksize=3)
+sobel_y = cv2.Sobel(gray_image, cv2.CV_64F, 0, 1, ksize=3)
+
+# Combine both directions
+sobel_combined = cv2.magnitude(sobel_x, sobel_y)
+
+# Normalize and convert to uint8
+sobel_combined = np.uint8(255 * sobel_combined / np.max(sobel_combined))
 
 # Save and display the result
-cv2.imwrite('output.jpg', filtered_image)
-cv2.imshow('Filtered Image', filtered_image)
+cv2.imwrite('output.jpg', sobel_combined)
+cv2.imshow('Sobel Edge Detection', sobel_combined)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
 ## Conclusion
-By understanding and implementing convolution filters, we enhance image processing in our project, leveraging the best techniques available for our specific needs.
+By implementing the **Sobel Edge Detection Filter**, we can effectively extract edges from images, improving the ability of our project to analyze visual features. This technique is commonly used in artificial intelligence applications, making it a valuable addition to our image processing pipeline.
 
 ---
 Feel free to modify and expand based on further research and discussions with the team!
