@@ -46,4 +46,3 @@ This filter aligns best with our project requirements and enhances image process
 By implementing the **Contrast Enhancement Filter**, we improve the visibility of key details in images, making them more useful for analysis in various applications. This technique is widely used in medical imaging, photography, and computer vision, making it a valuable addition to our image processing pipeline.
 
 ---
-Feel free to modify and expand based on further research and discussions with the team!
