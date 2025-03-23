@@ -21,9 +21,9 @@ The first step in innovation is understanding the current standards. This projec
    - Highlights textures and patterns in the image.
    - Useful for emphasizing specific visual features.
 
-5. **Low-pass and High-pass Filters**
-   - Remove specific frequency components, reducing noise or enhancing details.
-   - Used in signal processing and image analysis.
+5. **Contrast Enhancement Filters**
+   - Improves the visibility of details by increasing the difference between light and dark regions.
+   - Used in medical imaging, photography, and computer vision.
 
 ## Research Sources
 We explored the following sources to understand and compare these filters:
@@ -35,41 +35,15 @@ We explored the following sources to understand and compare these filters:
   - Medium, Towards Data Science articles on CNN and image processing
 
 ## Chosen Filter & Justification
-After comparing various filters, we selected **Sobel Edge Detection Filter** because:
-- **Enhances edges effectively** by computing intensity gradients in both horizontal and vertical directions.
-- **Preserves important image details** while removing unnecessary noise.
-- **Widely used in computer vision applications**, such as object recognition and segmentation.
+After comparing various filters, we selected **Contrast Enhancement Filter** because:
+- **Increases image clarity** by improving the distinction between different intensity levels.
+- **Enhances important details** in images, making them more suitable for analysis.
+- **Commonly used in real-world applications**, such as medical imaging, photography, and surveillance.
 
 This filter aligns best with our project requirements and enhances image processing performance.
 
-## How to Implement
-To apply this filter in our project, follow these steps:
-```python
-import cv2
-import numpy as np
-
-# Load the image
-gray_image = cv2.imread('input.jpg', cv2.IMREAD_GRAYSCALE)
-
-# Apply the Sobel filter in both directions
-sobel_x = cv2.Sobel(gray_image, cv2.CV_64F, 1, 0, ksize=3)
-sobel_y = cv2.Sobel(gray_image, cv2.CV_64F, 0, 1, ksize=3)
-
-# Combine both directions
-sobel_combined = cv2.magnitude(sobel_x, sobel_y)
-
-# Normalize and convert to uint8
-sobel_combined = np.uint8(255 * sobel_combined / np.max(sobel_combined))
-
-# Save and display the result
-cv2.imwrite('output.jpg', sobel_combined)
-cv2.imshow('Sobel Edge Detection', sobel_combined)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-```
-
 ## Conclusion
-By implementing the **Sobel Edge Detection Filter**, we can effectively extract edges from images, improving the ability of our project to analyze visual features. This technique is commonly used in artificial intelligence applications, making it a valuable addition to our image processing pipeline.
+By implementing the **Contrast Enhancement Filter**, we improve the visibility of key details in images, making them more useful for analysis in various applications. This technique is widely used in medical imaging, photography, and computer vision, making it a valuable addition to our image processing pipeline.
 
 ---
-
+Feel free to modify and expand based on further research and discussions with the team!
