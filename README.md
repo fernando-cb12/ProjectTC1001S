@@ -47,10 +47,6 @@ K = \begin{bmatrix}
 
 Este kernel resalta los cambios abruptos en la intensidad de los píxeles, lo que ayuda a detectar los bordes de los objetos en la imagen.
 
-## Bibliografía
-
-_(Espacio para insertar referencias)_
-
 ## Colaborador
 
 - **Fernando Camou Bejarano** - A01255376
