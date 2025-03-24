@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 import matplotlib.pyplot as plt
 
 def apply_custom_filter(image, kernel, padding='same'):
@@ -14,7 +13,7 @@ def apply_custom_filter(image, kernel, padding='same'):
         raise ValueError("Padding debe ser 'same' o 'valid'")
     return filtered
 
-def get_filtered_images(image_path='radio.jpg', padding='same'):
+def get_filtered_images(image_path='boca.png', padding='same'):
     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     results = []
 
@@ -29,7 +28,7 @@ def get_filtered_images(image_path='radio.jpg', padding='same'):
 
     return image, results
 
-def show_all_filters(image_path='radio.jpg', padding='same'):
+def show_all_filters(image_path='boca.png', padding='same'):
     image, filtered_results = get_filtered_images(image_path, padding)
     total = len(filtered_results) + 1  # +1 for original image
 
