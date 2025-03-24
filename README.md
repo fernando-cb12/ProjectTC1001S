@@ -1,49 +1,56 @@
-# Python Image Filter Project
+# Detección de Bordes con Convolución en Python
 
-This repository contains a Python-based image filter implementation. The project demonstrates how to apply filtering techniques to process and manipulate images effectively.
+## Descripción del Proyecto
 
-## Features
+Este proyecto implementa un **filtro de detección de bordes** mediante convolución en Python. Se aplica un kernel de realce de bordes a una imagen en escala de grises utilizando operaciones matriciales.
 
-- Customizable image filtering logic.
-- Easy-to-understand Python code.
-- Suitable for various image processing tasks.
+## Estructura del Proyecto
 
-## Requirements
+```
+│── convolution.py  # Script principal
+│── image.jpg       # Imagen de prueba
+│── output_image.jpg # Imagen resultante después de la convolución
+│── README.md       # Documentación
+```
 
-- Python 3.8 or higher.
-- Required libraries: `numpy`, `opencv-python` (cv2).
+## Instalación y Ejecución
 
-## Installation
+### Requisitos Previos
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/fernando-cb12/projectTC1001S.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd your-repo-name
-   ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Es necesario tener instalado Python y las siguientes librerías:
 
-## Usage
+```sh
+pip install numpy opencv-python
+```
 
-1. Run the Python script:
-   ```bash
-   python image_filter.py
-   ```
-2. Follow the instructions provided in the script to apply the filter to your images.
+### Ejecución del Proyecto
 
-## Contributing
+Para ejecutar el script y aplicar el filtro de detección de bordes a la imagen, usa el siguiente comando en la terminal:
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+```sh
+python convolution.py
+```
 
-## License
+El script procesará la imagen `image.jpg`, aplicará el filtro y guardará la imagen resultante como `output_image.jpg`.
 
-This project is licensed under the [MIT License](LICENSE).
+## Fundamentos Teóricos - Detección de Bordes
 
-## Contact
+El proceso de detección de bordes en imágenes se basa en la aplicación de un **kernel de convolución**. En este caso, se usa un kernel de realce de bordes:
 
-For questions or suggestions, feel free to reach out at your-email@example.com.
+\[
+K = \begin{bmatrix}
+-1 & -1 & -1 \\
+-1 & 8 & -1 \\
+-1 & -1 & -1
+\end{bmatrix}
+\]
+
+Este kernel resalta los cambios abruptos en la intensidad de los píxeles, lo que ayuda a detectar los bordes de los objetos en la imagen.
+
+## Bibliografía
+
+_(Espacio para insertar referencias)_
+
+## Colaborador
+
+- **Fernando Camou Bejarano** - A01255376
