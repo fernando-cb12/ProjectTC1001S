@@ -29,7 +29,7 @@ pip install numpy opencv-python matplotlib
 ### Ejecución del Proyecto
 
 Para ejecutar el código y aplicar el filtro a una imagen, usa el siguiente comando en la terminal:
-
+https://github.com/fernando-cb12/ProjectTC1001S/edit/A01255376/README.md
 ```sh
 python FiltroConvolucion.py
 ```
@@ -53,11 +53,33 @@ donde:
 
 El kernel utilizado en este proyecto resalta los bordes y mejora la percepción de detalles en la imagen.
 
+## Casos de prueba
+
+### Caso #1
+
+- Entrada
+  <img src="radio.jpg" width=300px>
+
+- Salida
+    <img src="Figure_1.png" width=300px>
+
+### Caso #2
+
+- Entrada
+  <img src="boca.png" width=300px>
+
+- Salida
+  <img src="Figure_2.png" width=300px>
+
 ## Bibliografía
+
+- Soto Quirós, J. P. (n.d.). Convolución matricial aplicada al procesamiento de imágenes. Instituto Tecnológico de Costa Rica. Retrieved from https://www.tec.ac.cr/sites/default/files/media/doc/presentacion_pablosoto.pdf  
+
+- Jagatheeswari, R., & Kumar, P. (2020). Contrast enhancement for medical images based on Fuzzy c-means clustering and dynamic histogram equalization. Semantic Scholar. Retrieved from https://www.semanticscholar.org/paper/Contrast-enhancement-for-medical-images-based-on-by-Jagatheeswari-Kumar/acc2fc612b195b1e96e12dc3d7eb9a92ae543286
 
 ## Colaboradores
 
 - **Antonio Jesús Calderón Burgos** - A01255264
 - **Fernando Camou Bejarano** - A01255376
-- **Marco Antonio Ibarra Yedra**
-- **Luis Carlos Mares Rivera**
+- **Marco Antonio Ibarra Yedra** - A01253370
+- **Luis Carlos Mares Rivera** - A01255399
