@@ -57,19 +57,19 @@ El kernel utilizado en este proyecto resalta los bordes y mejora la percepción 
 
 ### Caso #1
 
-- Entrada
-  <img src="radio.jpg" width=300px>
+- Entrada  
+  <img src="radio.jpg" width=500px>
 
-- Salida
-    <img src="Figure_1.png" width=300px>
+- Salida  
+    <img src="resources/Figure_1.png" width=500px>
 
 ### Caso #2
 
-- Entrada
-  <img src="boca.png" width=300px>
+- Entrada  
+  <img src="boca.png" width=500px>
 
-- Salida
-  <img src="Figure_2.png" width=300px>
+- Salida  
+  <img src="resources/Figure_2.png" width=500px>
 
 ## Bibliografía
 
